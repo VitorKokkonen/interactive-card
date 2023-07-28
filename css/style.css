@@ -1,0 +1,24 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+figure{
+    position: relative;
+}
+figure .front-content{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    
+}
+.back-content img{
+    margin-left: 80px;
+}
+.back-content p{
+    position: absolute;
+    color: black;
+    top: 96px;
+    left: 432px;
+}
+
+
