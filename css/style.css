@@ -1,37 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
 body{
     background-image: url(/images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
-    box-sizing: border-box;
+    overflow: hidden;
 }
 main{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+}
 
-}
-.cards{
-    padding-right: 800px;
-}
 figure{
     position: relative;
+    color: white;
 }
 figure .front-content{
     position: absolute;
     top: 20px;
     left: 20px;
 }
+
 .back-content img{
     margin-left: 80px;
-    padding: 10px;
+    padding: 28px;
 }
+
 .back-content p{
     position: absolute;
-    color: black;
-    top: 106px;
-    left: 432px;
+    color: white;
+    top: 138px;
+    left: 450px;
+}
+section{
+    margin-right: 100px;
 }
 
+.form{
+    display: flex;
+    flex-direction: column;
+}
 
+.data-cvc{
+    display: flex;
+    flex-direction: column;
+}
+.form label{
+    color: hsl(278, 68%, 11%);
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-size: 14px;
+    margin-bottom: 8px;
+   
+}
+.form input{
+    outline: none;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+.form input::placeholder{
+    font-size: 18px;
+    color: hsl(270, 3%, 87%);
+}   
+
+#datames{
+    width: 70px;
+    margin: 2px;
+}
+
+.form button{
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
