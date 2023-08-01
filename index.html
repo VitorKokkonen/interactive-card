@@ -16,14 +16,16 @@
 <body>
 
   <main>
-    <section>
+    <section class="cards">
       <figure>
         <img src="./images/bg-card-front.png" alt="">
         <div class="front-content">
           <img src="./images/card-logo.svg" alt="">
-          <h1>0000 0000 0000 0000</h1>
-          <p>Jane Appleseed</p>
-          <p>00/00</p>
+          <div class="cardNUmber">
+            <h1>0000 0000 0000 0000</h1>
+            <p>Jane Appleseed</p>
+            <p>00/00</p>
+          </div>
         </div>
       </figure>
       <figure class="back-content">
@@ -33,40 +35,36 @@
     </section>
 
     <section>
-      <form>
-        <label for="name" name="name">Cardholder Name</label>
-        <input type="text" name="name">
+      <form class="form">
+        <label for="name">Cardholder Name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" required>
+
+        <label for="number">Card Number</label>
+        <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000" required>
+
+        <div class="data-cvc">
+          <label for="datames">Exp. Date (MM/YY)</label>
+          <div>
+            <input type="text" id="datames" placeholder="MM" minlength="2" maxlength="2" required>
+            <input type="text" id="datames" placeholder="YY" minlength="2" maxlength="2" required>
+            
+            <label for="cvc" id="cvclabel">CVC</label>
+            <input type="text" id="cvc" placeholder="e.g. 123" minlength="3" maxlength="3" required>
+          </div>
+        </div>
+
+
+        <button type="submit">Confirm</button>
       </form>
     </section>
   </main>
 
 
+  Completed state start -->
 
-
-
-
-
-  
-
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
+  <!-- Thank you!
   We've added your card details
-  Continue
+  Continue -->
 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
