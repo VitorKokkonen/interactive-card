@@ -23,7 +23,7 @@
           <img src="./images/card-logo.svg" alt="">
           <div class="cardNUmber">
             <h1>0000 0000 0000 0000</h1>
-            <p>Jane Appleseed</p>
+            <p id="name-card">Jane Appleseed</p>
             <p>00/00</p>
           </div>
         </div>
@@ -34,7 +34,7 @@
       </figure>
     </section>
 
-    <section>
+    <section class="formulario">
       <form class="form">
         <label for="name">Cardholder Name</label>
         <input type="text" id="name" name="name" placeholder="e.g. Jane Appleseed" required>
@@ -43,33 +43,31 @@
         <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000" required>
 
         <div class="data-cvc">
-          <label for="datames">Exp. Date (MM/YY)</label>
           <div>
+            <label for="datames">Exp. Date (MM/YY)</label>
             <input type="text" id="datames" placeholder="MM" minlength="2" maxlength="2" required>
             <input type="text" id="datames" placeholder="YY" minlength="2" maxlength="2" required>
-            
+          </div>
+          
+          <div>
             <label for="cvc" id="cvclabel">CVC</label>
             <input type="text" id="cvc" placeholder="e.g. 123" minlength="3" maxlength="3" required>
           </div>
         </div>
 
-
         <button type="submit">Confirm</button>
       </form>
+
+      <div class="complete">
+        <img src="/images/icon-complete.svg" alt="">
+        <h1>Thank You!</h1>
+        <p>We've added your card details</p>
+        <button type="submit">Continue</button>
+      </div>
     </section>
   </main>
 
-
-  Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue -->
-
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  <script src="script.js"></script>
 </body>
 
 </html>
