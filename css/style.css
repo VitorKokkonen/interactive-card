@@ -17,11 +17,16 @@ main{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100%;
+}
+.cards{
+    width: 40%;
 }
 
 figure{
     position: relative;
     color: white;
+    width: 100%;
 }
 figure .front-content{
     position: absolute;
@@ -51,8 +56,15 @@ section{
 
 .data-cvc{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    vertical-align: middle;
+    gap: 18px;
 }
+.data-cvc label{
+    display: block;
+}
+
+
 .form label{
     color: hsl(278, 68%, 11%);
     text-transform: uppercase;
@@ -75,8 +87,8 @@ section{
 }   
 
 #datames{
-    width: 70px;
-    margin: 2px;
+    width: 90px;
+    margin-right: 6px;
 }
 
 .form button{
@@ -87,4 +99,12 @@ section{
     color: hsl(0, 0%, 100%);
     background-color: hsl(278, 68%, 11%);
     cursor: pointer;
+}
+
+.complete{
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    gap: 28px;
+    margin: 200px;
 }
