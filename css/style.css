@@ -22,6 +22,26 @@ main{
 .cards{
     width: 40%;
 }
+.cardNumber{
+    position: relative;
+    top: 70px;
+    left: 2px;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+.cardNumber h1{
+    font-size: 30px;
+    margin-bottom: 20px
+    
+}
+.nameValid{
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+}
+.nameValid #name-card{
+    text-transform: uppercase;
+}
 
 figure{
     position: relative;
@@ -43,7 +63,7 @@ figure .front-content{
     position: absolute;
     color: white;
     top: 138px;
-    left: 450px;
+    left: 465px;
 }
 section{
     margin-right: 100px;
@@ -52,6 +72,10 @@ section{
 .form{
     display: flex;
     flex-direction: column;
+}
+.formulario .form label{
+    color: hsl(278, 68%, 11%);
+    letter-spacing: 2px;
 }
 
 .data-cvc{
@@ -107,4 +131,11 @@ section{
     flex-direction: column;
     gap: 28px;
     margin: 200px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;    
 }
