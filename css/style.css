@@ -1,103 +1,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
 }
-body{
+
+body {
     background-image: url(/images/bg-main-desktop.png);
     background-repeat: no-repeat;
     background-size: contain;
     overflow: hidden;
 }
-main{
+
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
 }
-.cards{
-    width: 40%;
+
+.cards {
+    display: flex;
+    flex-direction: column;
 }
-.cardNumber{
+
+.cardNumber {
     position: relative;
     top: 70px;
     left: 2px;
     letter-spacing: 4px;
     font-weight: 300;
 }
-.cardNumber h1{
+
+.cardNumber h1 {
+    display: flex;
     font-size: 30px;
     margin-bottom: 20px
-    
 }
-.nameValid{
-   display: flex;
-   justify-content: space-between;
-   font-size: 14px;
+
+.nameValid {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
 }
-.nameValid #name-card{
+
+.nameValid #name-card {
     text-transform: uppercase;
 }
 
-figure{
+figure {
     position: relative;
     color: white;
-    width: 100%;
 }
-figure .front-content{
+
+figure .front-content {
     position: absolute;
     top: 20px;
     left: 20px;
 }
 
-.back-content img{
+.back-content img {
     margin-left: 80px;
     padding: 28px;
 }
 
-.back-content p{
+.back-content p {
     position: absolute;
     color: white;
     top: 138px;
     left: 465px;
 }
-section{
+
+section {
     margin-right: 100px;
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
-.formulario .form label{
+
+.formulario .form label {
     color: hsl(278, 68%, 11%);
     letter-spacing: 2px;
 }
 
-.data-cvc{
+.data-cvc {
     display: flex;
     flex-direction: row;
     vertical-align: middle;
     gap: 18px;
 }
-.data-cvc label{
+
+.data-cvc label {
     display: block;
 }
 
 
-.form label{
+.form label {
     color: hsl(278, 68%, 11%);
     text-transform: uppercase;
     letter-spacing: normal;
     font-size: 14px;
     margin-bottom: 8px;
-   
+
 }
-.form input{
+
+.form input {
     outline: none;
     padding: 14px;
     border-radius: 8px;
@@ -105,17 +120,18 @@ section{
     margin-bottom: 40px;
     font-size: 18px;
 }
-.form input::placeholder{
+
+.form input::placeholder {
     font-size: 18px;
     color: hsl(270, 3%, 87%);
-}   
+}
 
-#datames{
+#datames {
     width: 90px;
     margin-right: 6px;
 }
 
-.form button{
+.form button {
     padding: 20px;
     border-radius: 8px;
     border: none;
@@ -125,17 +141,192 @@ section{
     cursor: pointer;
 }
 
-.complete{
+.complete {
     text-align: center;
     display: none;
     flex-direction: column;
     gap: 28px;
     margin: 200px;
 }
-.footer{
+
+.footer {
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: center;
-    width: 100%;    
+    width: 100%;
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        background-image: url('../images/bg-main-mobile.png');
+    }
+
+    main {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+    }
+
+    .front-card {
+        position: absolute;
+        margin-left: 130px;
+        z-index: 1;
+        white-space: nowrap;
+    }
+
+    .back-content {
+        position: relative;
+        margin-left: 90px;
+        bottom: 80px;
+    }
+
+    .back-content img {
+        width: 360px;
+    }
+
+    .front-card .front-image {
+        width: 320px;
+    }
+
+    .cardNumber h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 8px;
+    }
+
+    .front-card .nameValid {
+        display: flex;
+        gap: 67px;
+        font-size: 12px;
+        padding-top: 14px;
+    }
+
+    .front-card .front-content img {
+        width: 60px;
+    }
+
+    .back-content img {
+        position: relative;
+    }
+
+    .cards .back-content p {
+        position: absolute;
+        font-size: 14px;
+        top: 48%;
+        left: 82%;
+        transform: translate(-50%,-50%);
+    }
+    .formulario{
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-top: 30px;
+        width: 400px;
+    }
+    .form .data-ano {
+        display: flex;
+        flex-direction: column;
+    }
+    .data-experiation{
+        display: flex;
+    }
+    #cvc{
+        width: 193px;
+
+    }
+    .footer{
+        font-size: 12px;
+    }
+
+}
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url('../images/bg-main-mobile.png');
+        background-size: 100% 30%; /* Ajuste a altura desejada */
+        background-position: top;
+    }
+
+    main {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+    }
+
+    .front-card {
+        position: absolute;
+        margin-left: 130px;
+        z-index: 1;
+        white-space: nowrap;
+    }
+
+    .back-content {
+        position: relative;
+        margin-left: 90px;
+        bottom: 80px;
+    }
+
+    .back-content img {
+        width: 360px;
+    }
+
+    .front-card .front-image {
+        width: 320px;
+    }
+
+    .cardNumber h1 {
+        font-size: 18px;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 8px;
+    }
+
+    .front-card .nameValid {
+        display: flex;
+        gap: 67px;
+        font-size: 12px;
+        padding-top: 14px;
+    }
+
+    .front-card .front-content img {
+        width: 60px;
+    }
+
+    .back-content img {
+        position: relative;
+    }
+
+    .cards .back-content p {
+        position: absolute;
+        font-size: 14px;
+        top: 48%;
+        left: 82%;
+        transform: translate(-50%,-50%);
+    }
+    .formulario{
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-top: 30px;
+        width: 400px;
+    }
+    .form .data-ano {
+        display: flex;
+        flex-direction: column;
+    }
+    .data-experiation{
+        display: flex;
+    }
+    #cvc{
+        width: 193px;
+
+    }
+    .footer{
+        font-size: 12px;
+    }
 }
