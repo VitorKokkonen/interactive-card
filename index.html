@@ -19,22 +19,22 @@
 
     <section class="cards">
 
-      <figure>
-        <img src="./images/bg-card-front.png" alt="">
+      <figure class="front-card">
+        <img class="front-image" src="./images/bg-card-front.png" alt="">
         <div class="front-content">
           <img src="./images/card-logo.svg" alt="">
           <div class="cardNumber">
-            <h1>0000 0000 0000 0000</h1>
+            <h1 id="card-number">0000 0000 0000 0000</h1>
             <div class="nameValid">
-              <p id="name-card">Jane Appleseed</p>
-              <p id="valid-card">00/00</p>
+              <p id="name-card"></p>
+              <p id="valid-card"><span id="month"></span>/<span id="year">00</span></p>
             </div>
           </div>
         </div>
       </figure>
 
       <figure class="back-content">
-        <img src="./images/bg-card-back.png" alt="">
+        <img class="card-image" src="./images/bg-card-back.png" alt="">
         <p>000</p>
       </figure>
 
@@ -52,11 +52,16 @@
 
         <div class="data-cvc">
 
-          <div>
+          <div class="data-ano">
 
             <label for="datames">Exp. Date (MM/YY)</label>
-            <input type="text" id="datames" placeholder="MM" minlength="2" maxlength="2" required>
-            <input type="text" id="datames" placeholder="YY" minlength="2" maxlength="2" required>
+            
+            <div class="data-experiation">
+              <input type="text" id="datames" class="month" placeholder="MM" minlength="2" maxlength="2" required
+                oninput="dadosCartao()">
+              <input type="text" id="datames" class="year" placeholder="YY" minlength="2" maxlength="2" required
+                oninput="dadosCartao()">
+            </div>
 
           </div>
 
@@ -83,8 +88,8 @@
   <footer class="footer">
     <p>Challenge by Frontend Mentor. Coded by <a target="_blank" href="https://www.linkedin.com/in/vitor-hugo-kokkonen-dos-santos-142a21262/">  Vitor Hugo Kokkonen</a>.</p>
   </footer>
-  
-  <script src="script.js"></script>
+
+  <script src="dataCards.js"></script>
 </body>
 
 </html>
