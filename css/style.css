@@ -197,6 +197,7 @@ section {
         white-space: nowrap;
         position: absolute;
         bottom: 8px;
+        color: #fff;
     }
 
     .front-card .nameValid {
