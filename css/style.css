@@ -37,13 +37,12 @@ main {
 }
 
 .cardNumber h1 {
-    display: flex;
+    width: 100%;
     font-size: 30px;
     margin-bottom: 20px
 }
 
 .nameValid {
-    position: relative;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -193,11 +192,11 @@ section {
     }
 
     .cardNumber h1 {
+        color: #FFf;
         font-size: 18px;
         white-space: nowrap;
         position: absolute;
         bottom: 8px;
-        color: #fff;
     }
 
     .front-card .nameValid {
