@@ -1,4 +1,13 @@
 function dadosCartao() {
+    const number = document.getElementById('number').value
+    const numberCard = document.getElementById('card-number')
+
+    if(number !== ""){
+        numberCard.innerHTML = number
+    } else{
+        numberCard.innerHTML = "0000 0000 0000 0000"
+    }
+
     const name = document.getElementById('name').value
     const nameCard = document.getElementById('name-card')
 
@@ -25,6 +34,17 @@ function dadosCartao() {
     } else {
         yearCard.innerHTML = "00"
     }
+
+    const cvc = document.getElementById('cvc').value
+    const cvcCard = document.getElementById('cvcCard')
+
+    if(cvc !== ''){
+        cvcCard.innerHTML = cvc
+    } else{
+        cvcCard.innerHTML = '000'
+    }
+
+
 
 }
 dadosCartao()
