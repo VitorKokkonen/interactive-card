@@ -1,13 +1,17 @@
 function dadosCartao() {
-    const number = document.getElementById('number').value
-    const numberCard = document.getElementById('card-number')
+    const numberInput = document.getElementById('number');
+    const numberCard = document.getElementById('card-number');
+    const number = numberInput.value.replace(/\D/g, '');
+    const formattedNumber = number.replace(/(\d{4})(?=\d)/g, '$1 ');
 
-    if(number !== ""){
-        numberCard.innerHTML = number
-    } else{
-        numberCard.innerHTML = "0000 0000 0000 0000"
+    if (formattedNumber !== "") {
+        numberInput.value = formattedNumber;
+        numberCard.innerHTML = formattedNumber;
+    } else {
+        numberInput.value = "";
+        numberCard.innerHTML = "0000 0000 0000 0000";
     }
-
+    
     const name = document.getElementById('name').value
     const nameCard = document.getElementById('name-card')
 
