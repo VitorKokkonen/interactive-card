@@ -31,7 +31,6 @@ main {
 .cardNumber {
     position: relative;
     top: 70px;
-    left: 2px;
     letter-spacing: 4px;
     font-weight: 300;
 }
@@ -49,8 +48,10 @@ main {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    letter-spacing: 2px;
 }
-.nameValid #valid-card{
+
+.nameValid #valid-card {
     margin-right: 180px;
 }
 
@@ -146,6 +147,39 @@ section {
     cursor: pointer;
 }
 
+.sucess {
+    display: none;
+    flex-direction: column;
+    gap: 42px;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.sucess img {
+    margin: 0 auto;
+}
+
+.sucess h1 {
+    text-transform: uppercase;
+    font-size: 34px;
+    color: hsl(278, 68%, 11%);
+}
+
+.sucess p {
+    color: hsl(270, 3%, 87%);
+    font-weight: bold;
+}
+
+.sucess button {
+    padding: 15px 180px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    cursor: pointer;
+}
+
 .complete {
     text-align: center;
     display: none;
@@ -162,11 +196,104 @@ section {
     width: 100%;
 }
 
+@media screen and (max-width: 425px) {
+    body {
+        background-image: url('../images/bg-main-mobile.png');
+    }
+
+    main {
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .cards {
+        flex-direction: column-reverse;
+    }
+
+    .front-card {
+        position: absolute;
+        margin-left: 130px;
+        z-index: 1;
+        white-space: nowrap;
+    }
+
+    .back-content {
+        position: relative;
+        margin-left: 90px;
+        bottom: 80px;
+    }
+
+    .back-content img {
+        width: 360px;
+    }
+
+    .front-card .front-image {
+        width: 320px;
+    }
+
+    .cardNumber h1 {
+        color: #FFf;
+        font-size: 18px;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 8px;
+    }
+
+    .front-card .nameValid {
+        display: flex;
+        gap: 67px;
+        font-size: 12px;
+        padding-top: 14px;
+    }
+
+    .front-card .front-content img {
+        width: 60px;
+    }
+
+    .back-content img {
+        position: relative;
+    }
+
+    .cards .back-content p {
+        position: absolute;
+        font-size: 14px;
+        top: 48%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+    }
+
+    .formulario {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-top: 30px;
+        width: 400px;
+    }
+
+    .form .data-ano {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .data-experiation {
+        display: flex;
+    }
+
+    #cvc {
+        width: 193px;
+
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+
+}
 
 @media screen and (max-width: 1024px) {
     body {
         background-image: url('../images/bg-main-mobile.png');
-        background-size: 100% 30%; /* Ajuste a altura desejada */
+        background-size: 100% 30%;
+        /* Ajuste a altura desejada */
         background-position: top;
     }
 
@@ -227,26 +354,31 @@ section {
         font-size: 14px;
         top: 48%;
         left: 82%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
-    .formulario{
+
+    .formulario {
         box-sizing: border-box;
         margin: 0 auto;
         padding-top: 30px;
         width: 400px;
     }
+
     .form .data-ano {
         display: flex;
         flex-direction: column;
     }
-    .data-experiation{
+
+    .data-experiation {
         display: flex;
     }
-    #cvc{
+
+    #cvc {
         width: 193px;
 
     }
-    .footer{
+
+    .footer {
         font-size: 12px;
     }
 }
