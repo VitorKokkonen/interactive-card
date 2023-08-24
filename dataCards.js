@@ -11,7 +11,7 @@ function dadosCartao() {
         numberInput.value = "";
         numberCard.innerHTML = "0000 0000 0000 0000";
     }
-    
+
     const name = document.getElementById('name').value
     const nameCard = document.getElementById('name-card')
 
@@ -48,7 +48,24 @@ function dadosCartao() {
         cvcCard.innerHTML = '000'
     }
 
+    buttonEvent()
 
+}
 
+function buttonEvent(){
+    const buttonContinue = document.getElementById('form')
+    const sucess = document.getElementById('sucess')
+    buttonContinue.addEventListener('submit', (e) => {
+        e.preventDefault()
+        buttonContinue.style.display = 'none'
+        sucess.style.display = 'flex'
+
+    })
+    const buttonConfirm = document.getElementById('button-continue')
+    buttonConfirm.addEventListener('click', (e) =>{
+        e.preventDefault()
+        buttonContinue.style.display = 'flex'
+        sucess.style.display = 'none'
+    })
 }
 dadosCartao()
