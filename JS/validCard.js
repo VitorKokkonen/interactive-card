@@ -15,7 +15,7 @@ function validaCartao() {
 
             
             if (input.value == '') {
-                const errorIndex = input.validity.valueMissing ? 1 : 0; // Defina o índice do erro com base na situação
+                const errorIndex = input.validity.valueMissing ? 1 : 0; 
                 const errorMessage = errors[errorIndex];
 
                 const para = document.createElement('p');
