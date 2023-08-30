@@ -7,30 +7,33 @@ function validaCartao() {
     const required = document.querySelectorAll('[required]');
 
     required.forEach(input => {
+        let errorAdded = false;
+
+        
         input.addEventListener('invalid', (e) => {
-            e.preventDefault()            
+            e.preventDefault()
+            const elementoMesInvalido = document.querySelector('.month').value
+            const mesInvalido = parseInt(elementoMesInvalido)
+            if (!errorAdded && input.value == '') {
+                const p = document.createElement('p')
+                p.className = 'mensage-error'
+                p.textContent = errors[1]
 
-            const elementoMesInvalido = document.querySelector('.month').value;
-            const mes = parseInt(elementoMesInvalido)
+                input.parentNode.insertBefore(p, input.nextSibling)
+                errorAdded = true
+            } if (mesInvalido < 1 || mesInvalido > 12) {
+                const divMes = document.querySelector('.data-experiation')
+                const p = document.createElement('p')
+                p.className = 'mensage-error'
+                p.textContent = errors[2]
 
-            
-            if (input.value == '') {
-                const errorIndex = input.validity.valueMissing ? 1 : 0; 
-                const errorMessage = errors[errorIndex];
-
-                const para = document.createElement('p');
-                para.innerHTML = errorMessage;
-
-                input.parentNode.insertBefore(para, input.nextSibling);
-            } else if (mes > 12) {
-                const divDoMes = document.querySelector('.data-experiation')
-                const mesInvalido = document.createElement('p')
-                
-                divDoMes.appendChild(mesInvalido)
-                
+                divMes.appendChild(p);
+                errorAdded = true
             }
-        });
-    });
+        })
+
+    })
+
 
 }
 validaCartao()
