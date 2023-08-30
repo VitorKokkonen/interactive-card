@@ -195,7 +195,9 @@ section {
     justify-content: center;
     width: 100%;
 }
-
+.mensage-error{
+    color: hsl(0, 100%, 66%);
+}
 @media screen and (max-width: 425px) {
     body {
         background-image: url('../images/bg-main-mobile.png');
