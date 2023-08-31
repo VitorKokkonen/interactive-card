@@ -12,8 +12,12 @@ function validaCartao() {
         
         input.addEventListener('invalid', (e) => {
             e.preventDefault()
+            input.style.borderColor = 'hsl(0, 100%, 66%)'
             const elementoMesInvalido = document.querySelector('.month').value
             const mesInvalido = parseInt(elementoMesInvalido)
+            if (input.classList.contains('month')) {
+                return;
+            }
             if (!errorAdded && input.value == '') {
                 const p = document.createElement('p')
                 p.className = 'mensage-error'
@@ -21,14 +25,13 @@ function validaCartao() {
 
                 input.parentNode.insertBefore(p, input.nextSibling)
                 errorAdded = true
-            } if (mesInvalido < 1 || mesInvalido > 12) {
+            } else if (mesInvalido > 12) {
                 const divMes = document.querySelector('.data-experiation')
                 const p = document.createElement('p')
                 p.className = 'mensage-error'
                 p.textContent = errors[2]
 
                 divMes.appendChild(p);
-                errorAdded = true
             }
         })
 
