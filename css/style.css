@@ -197,6 +197,8 @@ section {
 }
 .mensage-error{
     color: hsl(0, 100%, 66%);
+    position: relative;
+    bottom: 18px;
 }
 @media screen and (max-width: 425px) {
     body {
