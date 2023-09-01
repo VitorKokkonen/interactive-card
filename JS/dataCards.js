@@ -49,23 +49,34 @@ function dadosCartao() {
     }
 
     buttonEvent()
-
 }
 
 function buttonEvent(){
     const buttonContinue = document.getElementById('form')
     const sucess = document.getElementById('sucess')
+
     buttonContinue.addEventListener('submit', (e) => {
         e.preventDefault()
         buttonContinue.style.display = 'none'
         sucess.style.display = 'flex'
 
     })
+
     const buttonConfirm = document.getElementById('button-continue')
     buttonConfirm.addEventListener('click', (e) =>{
         e.preventDefault()
+
         buttonContinue.style.display = 'flex'
         sucess.style.display = 'none'
+
+        const input = document.querySelectorAll('input')
+        input.forEach(input => {
+            input.value = ''   
+            input.style.borderColor = '#ccc'
+        })
+
+        const error = document.querySelector('.mensage-error')
+        error.remove()
     })
 }
 dadosCartao()
